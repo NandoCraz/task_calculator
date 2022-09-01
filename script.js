@@ -1,4 +1,13 @@
 let tampung = document.getElementById("tampung");
+let change = document.getElementById("change");
+let body = document.getElementById("mainBody");
+
+change.addEventListener("click", function () {
+  body.classList.toggle("bg-light");
+  body.classList.toggle("text-dark");
+  body.classList.toggle("bg-dark");
+  body.classList.toggle("text-light");
+});
 
 function allClear() {
   tampung.innerText = "";
