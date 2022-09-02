@@ -1,12 +1,23 @@
 let tampung = document.getElementById("tampung");
 let change = document.getElementById("change");
 let body = document.getElementById("mainBody");
+let fa = document.getElementById("fa");
+let ganti = document.querySelectorAll(".ganti");
 
 change.addEventListener("click", function () {
+  fa.classList.toggle("fa-sun");
+  fa.classList.toggle("fa-moon");
   body.classList.toggle("bg-light");
   body.classList.toggle("text-dark");
   body.classList.toggle("bg-dark");
   body.classList.toggle("text-light");
+
+  ganti.forEach((item) => {
+    item.classList.toggle("bg-light");
+    item.classList.toggle("text-dark");
+    item.classList.toggle("bg-dark");
+    item.classList.toggle("text-light");
+  });
 });
 
 function allClear() {
